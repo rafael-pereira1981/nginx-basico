@@ -1,0 +1,13 @@
+version: '3'
+services:
+  site-web-nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - site-nginx-vol:/var/www/html
+
+volumes:
+  site-nginx-vol:
